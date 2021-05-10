@@ -1,0 +1,229 @@
+@import '_variables.scss';
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+//1. Variables below
+$primary-color: #DD1C1A;
+$secondary-color: #F0C808;
+$almost-white:#F2F4F3;
+$dark-blue: #086788;
+$light-blue: #06AED5;
+$font-body: Times, serif;
+$font-headings: Arial, sans-serif;
+
+$dark-brown: #3E3832;
+$tan-color: #E4E2D6;
+
+//  Mixin to deal with nav hovers, changing color and font size
+
+@mixin hoverChange ($color){
+  font-size: 110%;
+  color: $color;
+}
+
+body {
+  background: $dark-brown;
+  color: black;
+  font-family: $font-body;
+}
+
+.nav {
+    background: $primary-color;
+  a{
+    color: white;
+  }
+  a:hover {
+    //calling on the mixin for hovers
+    @include hoverChange(#ffff00);
+  }
+}
+
+h1 {
+  text-shadow: 2px 2px 4px #bfbfbf;
+  font-family: $font-headings;
+}
+
+
+// HOME PAGE STYLES  --------------
+// Logo
+#logo {
+  height: 10em;
+  padding-left: 40%;
+  padding-top: 2em;
+}
+// Newsletter signup
+form p {
+  text-align: left;
+  font-size: 1.5em;
+  color: white;
+}
+
+// Paragraph text on home page
+.jumbotron p {
+  text-align: left;
+  font-size: 1.1em;
+  color: darken($primary-color, 10%);
+}
+
+// Main area of home page
+.jumbotron {
+  background-color: $tan-color;
+
+  h1 {
+    color: $primary-color;
+    font-size: 2.5em;
+    font-weight: 500;
+
+  }
+}
+
+// Text on main area of home page
+.greeting {
+  padding-top: 2em;
+  padding-bottom: 3em;
+
+  .card {
+    margin-top: 2em;
+    background-color: white;
+    border: dashed 1px $primary-color;
+
+    .card-header {
+      h5 {
+        a {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// Hours list
+.card-body ul {
+  list-style-type: none;
+}
+
+// Quote
+blockquote {
+  padding-bottom: 1.2em;
+
+  .blockquote-footer {
+    color: darken($primary-color, 20%);
+    font-size: 1em;
+
+    .cite { // Quote citation
+      padding-bottom: 2em;
+      @extend .blockquote-footer
+    }
+  }
+};
+
+// Quote text
+.mb-0 {
+  font-size: 1.1em;
+  color: white;
+}
+
+// Buttons on home page
+.btn {
+  background-color: $primary-color;
+  border: white;
+  color: white;
+}
+
+.btn:hover {
+  background-color: darken($primary-color, 40%);
+  color: white;
+}
+
+.btn:active {
+  background-color: lighten(black, 20%);
+  border: black;
+}
+
+// Space under email submit
+.row {
+  padding-bottom: 2em;
+}
+
+// Image carousels
+.images {
+  padding-bottom: 2em;
+
+  h2 {
+    text-align: center;
+    color: white;
+  }
+}
+
+// Copyright
+.copy {
+  padding-top: 1.5em;
+  text-align: center;
+  color: white;
+}
+
+// Announcement interior link color
+.card-body a {
+  color: $primary-color;
+}
+
+.aboutus {
+  h5 {
+    padding-top: 2em;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+// END HOME PAGE STYLES ------------
+
+// MENU STYLES -----
+.panel-title{
+  padding-top: 1em;
+  font-weight: bold;
+}
+
+.panel-title a{
+  color:$secondary-color;
+}
+.panel-title a:hover{
+  color:white;
+}
+
+.menu-boxes{
+  background:$dark-brown;
+  color: white;
+  padding: 2em;
+  text-align: center;
+  font-family: $font-headings;
+}
+#menu-body{
+  background: $dark-brown;
+}
+#menu-body{
+  .jumbotron{
+  background: $tan-color;
+  }
+    h1 {
+      text-shadow: 2px 2px 4px #161515;
+      font-family: $font-headings;
+    }
+}
+
+td,th{
+  color:$secondary-color;
+}
+hr{
+  border:2px solid black;
+  border-radius: 12px;
+}
+
+td,th{
+  color:$secondary-color;
+}
+
+.contact-text {
+  color: #af1615;
+}
